@@ -1,0 +1,79 @@
+#spring:
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    username: ${DB_USERNAME}
+#    password: ${DB_PASSWORD}
+#    driver-class-name: org.postgresql.Driver
+#    url: ${DB_URL}
+#    hikari:
+#      connection-timeout: ${HIKARI_CONNECTION_TIMEOUT}
+#      idle-timeout: ${HIKARI_IDLE_TIMEOUT}
+#      max-lifetime: ${HIKARI_MAX_LIFETIME}
+#      connection-test-query: ${HIKARI_CONNECTION_TEST_QUERY}
+#      maximum-pool-size: ${HIKARI_MAXIMUM_POOL_SIZE}
+#      minimum-idle: ${HIKARI_MINIMUM_IDLE}
+#      initialization-fail-timeout: ${HIKARI_INITIALIZATION_FAIL_TIMEOUT}
+#      isolate-internal-queries: ${HIKARI_ISOLATE_INTERNAL_QUERIES}
+#      validation-timeout: ${HIKARI_VALIDATION_TIMEOUT}
+#      data-source-properties:
+#        cachePrepStmts: ${HIKARI_DATASOURCE_PROPERTIES_CACHEPREPSTMTS}
+#        prepStmtCacheSize: ${HIKARI_DATASOURCE_PROPERTIES_PHOTOSYNTHESIZE}
+#        prepStmtCacheSqlLimit: ${HIKARI_DATASOURCE_PROPERTIES_PREPSTMTCACHESQLLIMIT}
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    generate-ddl: false
+#    show_sql: false
+#    properties:
+#      hibernate:
+#        javax.persistence.validation.mode: none
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        jdbc:
+#          batch_size: 50
+#          fetch_size: 100
+#          use_scrollable_resultset: true
+#          lob.non-contextual-creation: true
+#        format_sql: false
+#      cache:
+#        use_second_level_cache: true
+#        use_query_cache: true
+#        region.factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  flyway:
+#    locations: classpath:db/migration/${migrate.db-server}
+#    baseline-on-migrate: true
+#    clean-disabled: false
+#    enabled: true
+#    schemas: ${migrate.db-schema}
+#
+#migrate:
+#  db-server: ${DB_SERVER}
+#  db-schema: ${DB_SCHEMA}
+#
+#resilience:
+#  circuitbreaker:
+#    sliding-window-size: ${CIRCUIT_BREAKER_SLIDING_WINDOW_SIZE}
+#    failure-rate-threshold: ${CIRCUIT_BREAKER_FAILURE_RATE_THRESHOULD}
+#    permitted-number-of-calls-in-half-open-state: ${CIRCUIT_BREAKER_PERMITTED_NUMBER_CALLS}
+#    wait-duration-in-open-state: ${CIRCUIT_BREAKER_WAIT_DURATION_IN_OPEN_STATE}
+#    minimum-number-of-calls: ${CIRCUIT_BREAKER_MINIMUM_NUMBER_OF_CALLS}
+#  retry:
+#    max-attempts: ${RETRY_MAX_ATTEMPTS}
+#    wait-duration: ${RETRY_WAIT_DURATION}
+#  ratelimiter:
+#    limit-for-period: ${LIMITER_FOR_PERIOD}
+#    limit-refresh-period: ${LIMITER_REFRESH_PERIOD}
+#    timeout-duration: ${LIMITER_TIMEOUT_DURATIOS}
+#
+#logging:
+#  level:
+#    root: info
+#    org.springframework.web: error
+#    org.hibernate: error
+#    org.hibernate.SQL: error
+#    org.hibernate.type.descriptor.sql.BasicBinder: error
+#    org.springframework.security: error
+#    org.springframework.orm.jpa: error
+#    org.flywaydb: error
+#    org.springdoc: error
+#    org.springframework.boot.actuate: error

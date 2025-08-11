@@ -1,1 +1,36 @@
-spring.application.name=financeiro-service
+server:
+  port: ${SERVER_PORT:9012}
+  servlet:
+    context-path: /financeiro-service
+spring:
+  application:
+    name: financeiro-service
+  profiles:
+    active: ${ENVIRONMENT:local}
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  output:
+    ansi:
+      enabled: always
+
+version:
+  info:
+    filename: ${project.version}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  show-actuator: true
+
+
+
+
+
