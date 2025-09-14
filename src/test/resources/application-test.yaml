@@ -1,0 +1,114 @@
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+#    allow-circular-references: true
+#  output:
+#    ansi:
+#      enabled: always
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/financeiro_test
+#    hikari:
+#      connection-timeout: 300000
+#      idle-timeout: 60000
+#      max-lifetime: 3000
+#      maximum-pool-size: 5
+#      minimum-idle: 51
+#      initialization-fail-timeout: 2000
+#      validation-timeout: 3000
+#      data-source-properties:
+#        cachePrepStmts: true
+#        prepStmtCacheSize: 512
+#        prepStmtCacheSqlLimit: 2048
+#      connection-test-query: SELECT 1
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    generate-ddl: false
+#    show_sql: true
+#    properties:
+#      hibernate:
+#        javax.persistence.validation.mode: none
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        jdbc:
+#          batch_size: 50
+#          fetch_size: 100
+#          use_scrollable_resultset: true
+#          lob.non-contextual-creation: true
+#        format_sql: true
+#      org.hibernate.envers.audit_table_suffix: _AUD
+#      org.hibernate.envers.revision_field_name: ID_AUD
+#      org.hibernate.envers.revision_type_field_name: TIPO_AUD
+#      org.hibernate.envers.revision_table_name: LOG_AUDITORIA
+#      cache:
+#        use_second_level_cache: true
+#        use_query_cache: true
+#        region.factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  flyway:
+#    locations: classpath:db/migration/${migrate.db-server}
+#    baseline-on-migrate: true
+#    clean-disabled: false
+#    enabled: true
+#    schemas: public
+#
+#migrate:
+#  db-server: ${DB_SERVER:postgresql}
+#  db-schema: ${DB_SCHEMA:public}
+#
+#resilience:
+#  circuitbreaker:
+#    sliding-window-size: ${CIRCUIT_BREAKER_SLIDING_WINDOW_SIZE:100}
+#    failure-rate-threshold: ${CIRCUIT_BREAKER_FAILURE_RATE_THRESHOULD:50}
+#    permitted-number-of-calls-in-half-open-state: ${CIRCUIT_BREAKER_PERMITTED_NUMBER_CALLS:10}
+#    wait-duration-in-open-state: ${CIRCUIT_BREAKER_WAIT_DURATION_IN_OPEN_STATE:10s}
+#    minimum-number-of-calls: ${CIRCUIT_BREAKER_MINIMUM_NUMBER_OF_CALLS:10}
+#  retry:
+#    max-attempts: ${RETRY_MAX_ATTEMPTS:2}
+#    wait-duration: ${RETRY_WAIT_DURATION:2s}
+#  ratelimiter:
+#    limit-for-period: ${LIMITER_FOR_PERIOD:10}
+#    limit-refresh-period: ${LIMITER_REFRESH_PERIOD:1s}
+#    timeout-duration: ${LIMITER_TIMEOUT_DURATIOS:5s}
+#
+#version:
+#  info:
+#    filename: ${project.version}
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  endpoint:
+#    health:
+#      show-details: always
+#
+#springdoc:
+#  show-actuator: true
+#
+#integrate:
+#  webservices:
+#    core: ${CORE_URL:http://localhost:8989}
+#    ged-service: ${GED_SERVICE_URL:http://localhost:8991/ged-service}
+#
+#logging:
+#  level:
+#    root: debug
+#    org.springframework.web: debug
+#    org.hibernate: info
+#    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: info
+#    org.springframework.security: debug
+#    org.springframework.orm.jpa: debug
+#    org.flywaydb: debug
+#    org.springdoc: DEBUG
+#    org.springframework.boot.actuate: DEBUG
+#
+#  logback:
+#    rolling policy:
+#      max-file-size: 20MB
+#      max-history: 10
