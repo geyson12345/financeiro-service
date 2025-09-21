@@ -18,6 +18,7 @@ version:
   info:
     filename: ${project.version}
 
+
 management:
   endpoints:
     web:

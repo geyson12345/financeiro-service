@@ -1,0 +1,68 @@
+package br.com.finchsolucoes.financeiro.service.core.handlers;
+
+public interface MessageConstants {
+
+    String PARAMETES_INVALIDATED = "parameters.invalidated";
+    String PROPERTIES_INVALIDATED = "properties.invalidated";
+    String PROPERTIE_NOTFOUND = "properties.notfound";
+    String FIELDS_INVALIDATED = "field.invalidated";
+    String PERMISSAO_NAO_AUTORIZADA = "permissao.nao.autorizada";
+    String PERMISSAO_FALHA_SERVICE = "permissao.falha.service";
+    String PERMISSAO_ERRO_RESILIENCIA = "permissao.erro.resiliencia";
+    String INTEGRACAO_FAILURE_CIRCUIT_BREAKER = "integracao.failure.circuit.breaker";
+    String INTEGRACAO_FAILURE_RESISTENCE = "integracao.failure.resistence";
+    String ENTITY_NOT_FOUND = "entity.not.found";
+    String NOTIFY_NULL = "NULL";
+    String NOTIFY_EMPTY = "VAZIA";
+    String NOTIFY_ZERO = "ZERO";
+    String TOKEN_NOT_FOUND = "token.not.found";
+    String RESPONSAVEL_NOT_FOUND = "responsavel.not.found";
+    String CARTEIRA_PRINCIPAL_MORE_THAN_ON = "carteira.principal.more.than.one";
+    String CARTEIRA_PRINCIPAL_EQUAL_ZERO = "carteira.principal.equal.zero";
+    String CENTRO_CUSTO_NOME_EXISTENTE = "centrocusto.nome.exists";
+    String CENTRO_CUSTO_CODIGO_EXISTENTE = "centrocusto.codigo.exists";
+    String CARTEIRA_PRINCIPAL_EXISTENTE = "carteira.principal.existente";
+    String CENTRO_CUSTO_CARTEIRA_RELACAO_EXISTENT = "centrocusto.carteira.relation.exists";
+    String CENTRO_CUSTO_CARTEIRA_RELACAO_NOT_EXISTENT = "centrocusto.carteira.relation.not.exists";
+    String ID = "id";
+    String UUI = "uuidDistribuitedSystem";
+    String RESPONSAVEL = "categoria.responsavel";
+    String DATACRIACAO = "categoria.datacriacao";
+    String CENTRO_CUSTO_MOVIMENTACAO_PAGAR_RECEBER_JUNTOS = "centrocustomovimentaca.pagar.receber.join";
+    String CENTRO_CUSTO_MOVIMENTACAO_ESTORNO_OPERACAO_ILEGAL = "centrocustomovimentacao.estorno.operacao.ilegal";
+    String EXCEL_ERRO_GERACAO_PLANLIHA_BYTES = "excel.error.generate.bytes";
+    String ENTITY_ALREADY_EXISTS = "%s com %s '%s' já existe.";
+    String CODIGO_BANCO = "conta.bancaria.codigo.banco.not.found";
+    String CONTABANCARIADUPLICADA = "conta.bancaria.conta.duplicada";
+    String AJUSTESALDO = "conta.bancaria.ajuste.saldo";
+    String TIPOCONTACREDITO = "movimentacao.tipo.conta";
+    String MOVIMENTACAONOTFOUND = "movimentacao.bancaria.not.exists";
+    String CONTABANCARIAENTITY_ALREADY_EXISTS = "conta.bancaria.conta.bancaria.exists";
+    String CENTRO_CUSTO_CARTEIRA_RELACAO_TOTAL = "centrocusto.carteira.relation.total";
+    String CENTRO_CUSTO_MOVIMENTACAO_STATUS_ILEGAL_MOVIMENTO = "centrocustomovimentacao.status.ilegal.movimento";
+    String CENTRO_CUSTO_MOVIMENTACAO_LANCAMENTO_API_ILEGAL = "centrocustomovimentacao.lancamento.api.ilegal";
+    String CENTRO_CUSTO_MOVIMENTACAO_ESTORNO_LANCAMENTO_API_ILEGAL = "centrocustomovimentacao.estorno.lancamento.api.ilegal";
+    String CENTRO_CUSTO_MOVIMENTACAO_LANCAMENTO_CENTROCUSTO_ILEGAL = "centrocustomovimentacao.lancamento.centrocusto.ilegal";
+    String CATEGORIA_ALREADY_EXISTS = "categoria.nome.exists";
+    String PESSOA_PAPEL_INVALIDO = "pessoa.papel.invalido";
+    String CONTA_PAGAR_RECEBER_PAGO_CANCELADO = "conta.pagar.receber.pago.cancelado";
+    String DOCUMENTO_MORE_THAN_ONE_OBJECT = "documento.more.than.one.objecto";
+    String GEDSERVICE_CONTENT_ID_NULL = "gedservice-content-is-null";
+    String GEDSERVICE_GET_DOCUMENT_OPENCMISSESSION_FAILURE = "gedservice-get-document-opencmissession-failure";
+    String GEDSERVICE_DELETE_DOCUMENT_OPENCMISSESSION_FAILURE = "gedservice-delete-document-opencmissession-failure";
+    String GEDSERVICE_POST_DOCUMENT_OPENCMISSESSION_FAILURE = "gedservice-post-document-opencmissession-failure";
+    String GEDSERVICE_POST_DOCUMENT_CMISSESSION_SUCESS = "gedservice-post-document-cmissession-sucess";
+    String GEDSERVICE_GET_DOCUMENT_OPENCMISSESSION_SUCESS = "gedservice-get-document-opencmissession-sucess";
+    String DOCUMENTO_NOME_NULO = "documento.nome.nulo";
+    String DOCUMENTO_EXTENSA0_VAZIA = "documento.extensao.vazia";
+    String DOCUMENTO_EXTENSAO_INVALIDA = "documento.extensao.invalida";
+    String CONTA_PAGAR_RECEBER_NAO_PAGO = "conta.pagar.receber.nao.pago";
+    String CONTA_BANCARIA_MOVIMENTACAO_NAO_ENCONTRADA = "conta.bancaria.movimentacao.nao.encontrada";
+    String CONTA_BANCARIA_MOVIMENTACAO_DIRETA_DESPESA_RECEITA_NAO_PERMITIDA = "conta.bancaria.movimentacao.direta.despesa.receita.nao.permitida";
+    String CONTA_PAGAR_RECEBER_CENTRO_CUSTO_RATEIO_JUNTO = "conta.pagar.receber.centro.custo.rateio.junto";
+    String CONTA_PAGAR_RECEBER_SOMA_PERCENTUAL_RATEIO_NOT_100 = "conta.pagar.receber.soma.percentual.rateio.nao.igual.100";
+    String CONTA_PAGAR_RECEBER_SOMA_VALORES_RATEIO_INVALIDO = "conta.pagar.receber.soma.valores.rateio.invalido";
+    String CONTA_PAGAR_RECEBER_CENTRO_CUSTO_RATEIO_NAO_INFORMAOO = "conta.pagar.receber.centro.custo.rateio.naoinformado";
+    String CONTA_PAGAR_RECEBER_CENTRO_CUSTO_RATEIO_DUPLICADO = "conta.pagar.receber.centro.custo.rateio.duplicado";
+
+}
