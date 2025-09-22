@@ -73,7 +73,18 @@
             <artifactId>uuid-creator</artifactId>
             <version>4.6.0</version>
         </dependency>
-
+        <!-- Apache POI - núcleo -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+        <!-- Apache POI - suporte a arquivos do Excel (XSSF para XLSX) -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.5</version>
+        </dependency>
 
         <!-- MapStruct -->
         <dependency>

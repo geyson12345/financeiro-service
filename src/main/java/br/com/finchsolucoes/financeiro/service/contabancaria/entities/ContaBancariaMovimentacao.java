@@ -1,8 +1,8 @@
 package br.com.finchsolucoes.financeiro.service.contabancaria.entities;
 
 
-import br.com.finchsolucoes.financeiro.service.contabancaria.converters.*;
-import br.com.finchsolucoes.financeiro.service.contabancaria.enums.*;
+import br.com.finchsolucoes.financeiro.service.core.converters.*;
+import br.com.finchsolucoes.financeiro.service.core.enums.*;
 import br.com.finchsolucoes.financeiro.service.core.utils.*;
 import jakarta.persistence.*;
 import java.io.*;

@@ -2,6 +2,7 @@ server:
   port: ${SERVER_PORT:9012}
   servlet:
     context-path: /financeiro-service
+
 spring:
   application:
     name: financeiro-service
@@ -18,7 +19,6 @@ version:
   info:
     filename: ${project.version}
 
-
 management:
   endpoints:
     web:
@@ -30,8 +30,6 @@ management:
 
 springdoc:
   show-actuator: true
-
-
-
-
-
+  swagger-ui:
+    operations-sorter: method  # Ordena os endpoints por método HTTP
+    tags-sorter: alpha         # Ordena as tags em ordem alfabética

@@ -1,4 +1,4 @@
-package br.com.finchsolucoes.financeiro.service.contabancaria.enums;
+package br.com.finchsolucoes.financeiro.service.core.enums;
 
 import java.util.stream.*;
 import lombok.*;

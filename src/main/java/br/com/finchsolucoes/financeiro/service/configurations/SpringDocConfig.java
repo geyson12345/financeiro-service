@@ -1,7 +1,10 @@
 package br.com.finchsolucoes.financeiro.service.configurations;
 
 import br.com.finchsolucoes.financeiro.service.configurations.interfaces.SpringDocSupport;
+import br.com.finchsolucoes.financeiro.service.contabancaria.records.inputs.*;
+import br.com.finchsolucoes.financeiro.service.contabancaria.records.outputs.*;
 import br.com.finchsolucoes.financeiro.service.core.dtos.ErrorDetailsDTO;
+import br.com.finchsolucoes.financeiro.service.core.records.*;
 import io.swagger.v3.oas.models.media.Schema;
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
@@ -70,15 +73,15 @@ public class SpringDocConfig implements SpringDocSupport {
     private List<Class<?>> classesContaBancaria() {
         return List.of(
                 ErrorDetailsDTO.class,
-                ErrorDetailsDTO.Object.class
-//                ContaBancariaUpdate.class,
-//                ContaBancariaCreate.class,
-//                ContaBancariaInativarCreate.class,
-//                ContaBancariaOutput.class,
-//                ContaBancariaMovimentacaoCreate.class,
-//                ContaBancariaMovimentacaoOutput.class,
-//                ContaBancariaMovimentoEstornoInput.class,
-//                PageResult.class
+                ErrorDetailsDTO.Object.class,
+                ContaBancariaUpdate.class,
+                ContaBancariaCreate.class,
+                ContaBancariaInativarCreate.class,
+                ContaBancariaOutput.class,
+                ContaBancariaMovimentacaoCreate.class,
+                ContaBancariaMovimentacaoOutput.class,
+                ContaBancariaMovimentoEstornoInput.class,
+                PageResult.class
         );
     }
 

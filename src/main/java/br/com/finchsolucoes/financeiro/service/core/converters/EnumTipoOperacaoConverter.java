@@ -1,7 +1,7 @@
-package br.com.finchsolucoes.financeiro.service.contabancaria.converters;
+package br.com.finchsolucoes.financeiro.service.core.converters;
 
 
-import br.com.finchsolucoes.financeiro.service.contabancaria.enums.*;
+import br.com.finchsolucoes.financeiro.service.core.enums.*;
 import jakarta.persistence.*;
 
 @Converter(autoApply = true)
